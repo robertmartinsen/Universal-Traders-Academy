@@ -2,40 +2,32 @@ import React, { useEffect, useState } from "react"
 import { fetchLatestVideo } from "../../utils/api/ytApi"
 
 function YouTubeSection() {
-  const [videoInfo, setVideoInfo] = useState(null)
+  const [latestVideo, setLatestVideo] = useState(null);
 
   useEffect(() => {
-    const fetchVideo = async () => {
+    const fetchData = async () => {
       try {
-        const result = await fetchLatestVideo()
-        setVideoInfo(result)
+        const videoData = await fetchLatestVideo();
+        setLatestVideo(videoData);
       } catch (error) {
-        console.error("Error fetching video:", error)
+        console.error("Error fetching video:", error);
       }
-    }
+    };
 
-    fetchVideo()
-  }, [])
-
-  if (!videoInfo) {
-    return <div>Loading...</div>
-  }
-
-  const { videoId, title, thumbnailUrl } = videoInfo
+    fetchData();
+  }, []);
 
   return (
     <div>
-      <h2>{title}</h2>
-      <iframe
-        width="560"
-        height="315"
-        src={`https://www.youtube.com/embed/${videoId}`}
-        title={title}
-        allowFullScreen
-      ></iframe>
-      <img src={thumbnailUrl} alt={title} />
+      {latestVideo && (
+        <div>
+          <h2>{latestVideo.title}</h2>
+          <p>Video ID: {latestVideo.videoId}</p>
+          <img src={latestVideo.thumbnailUrl} alt="Video Thumbnail" />
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
 export default YouTubeSection
