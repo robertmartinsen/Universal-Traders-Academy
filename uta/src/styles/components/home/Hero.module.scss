@@ -1,0 +1,93 @@
+@import "../../variables.scss";
+
+.heroWrap {
+  max-width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.gradient {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 1), transparent);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.heroContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-10%, -50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1.7em;
+  }
+
+  p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .heroContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    h1 {
+      font-size: 1.3em;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.2em;
+    }
+
+    p {
+      font-size: 1em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .heroWrap {
+    max-width: 100%;
+    position: relative;
+    height: 100%;
+  }
+
+  .gradient {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 1), transparent);
+    position: relative;
+  }
+}

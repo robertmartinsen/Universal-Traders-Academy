@@ -1,0 +1,150 @@
+@import "../../variables.scss";
+
+.AboutSection {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+  border-width: 100px 1500px 0 0;
+  border-color: transparent;
+}
+
+.separater {
+  width: 0;
+  height: 0;
+  border-right: 98vw solid transparent;
+  border-bottom: 5vw solid white;
+}
+
+.aboutContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.aboutCard {
+  width: calc(50% - 50px);
+  color: white;
+  padding: 2% 5%;
+  line-height: 1.5em;
+}
+
+.telegramCard {
+  width: calc(50% + 50px);
+  color: white;
+  margin-top: 50px;
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  height: 100%;
+  width: 100%;
+}
+
+.telegrampic {
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  height: 450px;
+}
+
+.telegramBtnContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.telegramIcon {
+  height: 24px;
+  width: 24px;
+  margin-left: 5px;
+}
+
+.telegramBtn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: $primary;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgb(242, 242, 242);
+  font-size: 18px;
+  font-weight: bolder;
+  justify-content: center;
+  line-height: 1.25;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  cursor: pointer;
+}
+
+.telegramBtn:hover {
+  background-color: #fb823200;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  border: 1px solid rgb(35, 175, 222);
+  color: white;
+}
+
+.telegramBtn:hover {
+  transform: translateY(-1px);
+}
+
+.para1,
+.para2,
+.para3 {
+  display: none;
+}
+
+.carousel {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .aboutContainer {
+    display: inline-block;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+
+  .telegramCard {
+    width: 100%;
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .telegrampic {
+    height: 400px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+  .para3 {
+    display: block;
+  }
+  .separater {
+    width: 0;
+    height: 0;
+    border-right: 95vw solid transparent;
+    border-bottom: 5vw solid white;
+  }
+
+  .aboutCard {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .para1,
+  .para2 {
+    display: block;
+  }
+}

@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+$Poppins: "Poppins", sans-serif;
+
+// colors
+$dark: rgb(0, 0, 0);
+$light: rgb(255, 255, 255);
+$primary: #4ee44e;
+$bg: #ced0d1;
+$hover: #19d422;
+$secondary: #5452cf;
+
+@import "~bootstrap/scss/bootstrap";
