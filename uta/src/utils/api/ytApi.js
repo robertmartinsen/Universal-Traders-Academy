@@ -1,11 +1,11 @@
-const YOUTUBE_API_KEY = process.env.REACT_APP_API_KEY
+const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY
+console.log(process.env.REACT_APP_YOUTUBE_API_KEY)
 console.log("YOUTUBE_API_KEY:", YOUTUBE_API_KEY)
 const CHANNEL_ID = "UCmsUw_9yP8JVbuXZ6bTDyyQ"
-
 export const fetchLatestVideo = async () => {
   try {
     const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&maxResults=1&order=date&type=video&key=${YOUTUBE_API_KEY}`
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&maxResults=1&order=date&type=video&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
     )
 
     if (!response.ok) {
