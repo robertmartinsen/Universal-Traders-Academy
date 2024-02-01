@@ -1,0 +1,191 @@
+@import "../../variables.scss";
+
+.bg {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  background-image: url(../../../assets/testimonialBg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1Container {
+  height: 500px;
+  position: relative;
+}
+
+.slide2Container {
+  height: 500px;
+  position: relative;
+}
+
+.largerCarousel {
+  display: block;
+}
+
+.smallCarousel {
+  display: none;
+}
+
+.testi1 {
+  height: 352px;
+  width: 175px;
+  object-fit: cover;
+  border-radius: 15px;
+  transform: rotate(9deg);
+  position: absolute;
+  top: 14px;
+  left: 177px;
+}
+
+.testi2 {
+  height: 175px;
+  width: 374px;
+  object-fit: cover;
+  border-radius: 15px;
+  position: absolute;
+  top: 183px;
+  left: 487px;
+}
+
+.testi3 {
+  height: 246px;
+  width: 364px;
+  object-fit: cover;
+  border-radius: 15px;
+  transform: rotate(356deg);
+  position: absolute;
+  top: -4px;
+  right: 3px;
+}
+
+.testi4 {
+  height: 179px;
+  width: 299px;
+  object-fit: cover;
+  border-radius: 15px;
+  position: absolute;
+  top: 214px;
+  right: 485px;
+}
+
+.testi5 {
+  height: 200px;
+  width: 265px;
+  object-fit: cover;
+  border-radius: 15px;
+  position: absolute;
+  transform: rotate(9deg);
+  top: 19px;
+  right: 100px;
+}
+
+.testi6 {
+  height: 130px;
+  width: 239px;
+  object-fit: cover;
+  border-radius: 15px;
+  position: absolute;
+  transform: rotate(346deg);
+  top: 43px;
+  left: 140px;
+}
+
+@media only screen and (max-width: 1500px) {
+  .testi2 {
+    top: 226px;
+    left: 391px;
+  }
+
+  .testi4 {
+    top: 214px;
+    right: 408px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .testi2 {
+    top: 226px;
+    left: 478px;
+  }
+
+  .testi4 {
+    top: 214px;
+    right: 497px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .testi1 {
+    left: 132px;
+  }
+
+  .testi2 {
+    top: 226px;
+    left: 331px;
+  }
+
+  .testi3 {
+    right: -54px;
+  }
+
+  .testi4 {
+    top: 214px;
+    right: 327px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .largerCarousel {
+    display: none;
+  }
+
+  .smallCarousel {
+    display: block;
+    height: 400px;
+  }
+
+  .testi1small {
+    height: 352px;
+    width: 175px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .testi2small {
+    height: 175px;
+    width: 374px;
+    margin-left: 48px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .testi3small {
+    height: 246px;
+    width: 364px;
+    margin-left: 105px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .testi4small {
+    height: 179px;
+    width: 299px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .testi5small {
+    height: 200px;
+    width: 265px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .testi6small {
+    height: 130px;
+    width: 239px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+}

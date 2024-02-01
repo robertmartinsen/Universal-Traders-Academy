@@ -1,8 +1,5 @@
 const CHANNEL_ID = "UCmsUw_9yP8JVbuXZ6bTDyyQ"
 const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY
-console.log(process.env.NODE_ENV)
-console.log("YOUTUBE_API_KEY:", YOUTUBE_API_KEY)
-console.log(process.env)
 
 export const fetchLatestVideo = async () => {
   try {

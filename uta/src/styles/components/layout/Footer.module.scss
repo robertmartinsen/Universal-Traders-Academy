@@ -1,12 +1,60 @@
 @import "../../variables.scss";
 
 .footer {
-  background-color: $secondary;
+  background-color: $dark;
   color: white;
   padding: 20px;
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin-right: 40px;
+
+    li a {
+      padding: 20px;
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        transition: 0.3s ease;
+        color: $primary;
+      }
+    }
+  }
 }
 
 .logo {
   height: 100px;
   width: 180px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.iconBg {
+  padding: 8px;
+  margin: 10px;
+  border-radius: 100px;
+  border: 1px solid $dark;
+  background-color: $primary;
+  border: 1px solid rgb(0 0 0);
+  box-shadow: rgb(220 220 229 / 25%) 0px 7px 29px 0px;
+
+  &:hover {
+    transition: 0.3s ease;
+    background-color: transparent;
+    border: 1px solid $primary;
+  }
+}
+
+.icon {
+  height: 32px;
+  width: 32px;
 }

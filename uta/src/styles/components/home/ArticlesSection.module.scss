@@ -1,0 +1,52 @@
+@import "../../variables.scss";
+
+.articlesBtnContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.infoBox {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.articlesBtn {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: $primary;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgb(242, 242, 242);
+  font-size: 18px;
+  font-weight: bolder;
+  justify-content: center;
+  line-height: 1.25;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  cursor: pointer;
+}
+
+.articlesBtn:hover {
+  background-color: #fb823200;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  border: 1px solid rgb(0, 0, 0);
+  color: rgba(45, 45, 45, 0.975);
+  transform: translateY(-1px);
+}
+
+@media only screen and (max-width: 450px) {
+  .infoBox {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .infoBox {
+    width: 250px;
+  }
+}
