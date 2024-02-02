@@ -9,13 +9,13 @@ import instagram from "../../assets/instagram.svg"
 function Footer() {
   return (
     <footer
-      className={`${classes.footer} footer text-light text-center py-3 pb-5`}
+      className={`${classes.footer} footer bottom text-light text-center py-3 pb-5`}
     >
       <div className="container text-center">
         <div className={`mt-4 ${classes.footerLinks}`}>
           <ul>
             <li>
-              <Link>About Us</Link>
+              <Link to="/About">About Us</Link>
             </li>
             <li>
               <a
