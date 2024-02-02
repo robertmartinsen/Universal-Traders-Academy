@@ -2,7 +2,7 @@ import { useState } from "react"
 import Carousel from "react-bootstrap/Carousel"
 
 import classes from "../../styles/components/home/TestimonialSection.module.scss"
-import background from "../../assets/testimonialBg.png"
+import "../../styles/components/home/carousel.scss"
 
 import testi1 from "../../assets/testi-1.JPG"
 import testi2 from "../../assets/testi-2.png"
@@ -45,6 +45,14 @@ function TestimonialSection() {
             </div>
           </Carousel.Item>
         </Carousel>
+
+        <style>
+          {`
+            .carousel-control-next {
+              margin-bottom: 150px;
+            }
+          `}
+        </style>
 
         <Carousel
           activeIndex={index}

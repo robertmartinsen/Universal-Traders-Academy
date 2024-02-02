@@ -1,0 +1,1 @@
+{"version":3,"sources":["../uta/src/styles/components/home/carousel.scss"],"names":[],"mappings":"AAAA,8CAEE,mBAAA","file":"carousel.min.css","sourcesContent":[".carousel-control-next,\n.carousel-control-prev {\n  margin-bottom: 150px;\n}\n"]}
