@@ -3,21 +3,21 @@ import React, { useState } from "react"
 import telegrampic from "../../assets/telegram-pic.png"
 import telegramIcon from "../../assets/telegram-plane.svg"
 
-import classes from "../../styles/components/home/AboutSection.module.scss"
+import classes from "../../styles/components/home/WelcomeSection.module.scss"
 
-function AboutSection() {
+function WelcomeSection() {
   const [index, setIndex] = useState(0)
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex)
   }
   return (
-    <div className={`mt-5 ${classes.AboutSection}`}>
+    <div className={`mt-5 ${classes.welcomeSection}`}>
       <div className="pt-5 container col-lg-10 col-xl-8 col-md-10 col-11">
-        <div className={`row ${classes.aboutContainer}`}>
-          <div className={`${classes.aboutCard}`}>
+        <div className={`row ${classes.welcomeContainer}`}>
+          <div className={`${classes.welcomeCard}`}>
             <div>
-              <h1 className="text-center">About UTA</h1>
+              <h1 className="text-center">Welcome to UTA</h1>
 
               <div>
                 <p className={classes.para1}>
@@ -75,4 +75,4 @@ function AboutSection() {
   )
 }
 
-export default AboutSection
+export default WelcomeSection

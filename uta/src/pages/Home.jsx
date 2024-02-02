@@ -1,7 +1,7 @@
 import React from "react"
 
 import Hero from "../components/home/Hero"
-import AboutSection from "../components/home/AboutSection"
+import WelcomeSection from "../components/home/WelcomeSection"
 import YouTubeSection from "../components/home/YouTubeSection"
 import TestimonialSection from "../components/home/TestimonialSection"
 import ArticlesSection from "../components/home/ArticlesSection"
@@ -13,7 +13,7 @@ function Home() {
         <Hero />
       </section>
       <section>
-        <AboutSection />
+        <WelcomeSection />
       </section>
       <section>
         <YouTubeSection />
