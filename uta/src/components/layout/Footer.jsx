@@ -26,7 +26,7 @@ function Footer() {
               </a>
             </li>
             <li>
-              <Link>Contact</Link>
+              <Link to="/Contact">Contact</Link>
             </li>
           </ul>
         </div>
