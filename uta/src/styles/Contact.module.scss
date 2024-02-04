@@ -1,0 +1,51 @@
+@import "./variables.scss";
+
+.contactBody {
+  min-height: 100vh;
+  margin-top: 125px;
+}
+
+.messageBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.centeredBox {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  height: 200px;
+}
+
+.messageContent {
+  text-align: center;
+  font-weight: bold;
+}
+
+.secondaryButton {
+  background-color: $primary;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+
+  &:hover {
+    color: white;
+    background-color: rgb(15, 223, 15);
+  }
+}
+
+.button {
+  padding: 15px;
+  font-weight: bold;
+}
