@@ -1,7 +1,10 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import emailjs from "emailjs-com"
+import Cookies from "js-cookie"
 
 import classes from "../styles/Contact.module.scss"
+
+const MAX_MESSAGES = 3
 
 const Contact = () => {
   const formRef = useRef()
@@ -13,6 +16,14 @@ const Contact = () => {
   })
 
   const [formSubmitted, setFormSubmitted] = useState(false)
+  const [messagesSent, setMessagesSent] = useState(0)
+
+  useEffect(() => {
+    const storedMessages = Cookies.get("globalMessagesSent")
+    if (storedMessages) {
+      setMessagesSent(parseInt(storedMessages, 10))
+    }
+  }, [])
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -24,6 +35,11 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
+    if (messagesSent >= MAX_MESSAGES) {
+      alert("You have reached the maximum number of messages allowed.")
+      return
+    }
 
     if (
       formData.name &&
@@ -43,6 +59,12 @@ const Contact = () => {
             console.log(result.text)
             setFormSubmitted(true)
             setFormData({ name: "", email: "", subject: "", message: "" })
+
+            const updatedMessagesSent = messagesSent + 1
+            Cookies.set("globalMessagesSent", updatedMessagesSent, {
+              expires: 1, // Cookie expiration in days
+            })
+            setMessagesSent(updatedMessagesSent)
           },
           (error) => {
             console.error(error.text)

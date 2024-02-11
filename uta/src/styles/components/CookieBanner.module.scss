@@ -1,0 +1,56 @@
+@import "../variables.scss";
+
+.cookieBanner {
+  position: fixed;
+  bottom: -100px; // Start off the screen
+  left: 20px;
+  background-color: $secondary;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  border-radius: 25px;
+  align-items: center;
+  opacity: 0; // Start with opacity 0
+  transition: all 0.5s ease-in-out; // Added transition properties
+
+  &.active {
+    bottom: 20px; // Bring in from the bottom
+    opacity: 1; // Fade in
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  button {
+    background-color: $primary;
+    color: white;
+    border: none;
+    margin-left: 20px;
+    padding: 7px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+}
+
+.textBox {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .cookieBanner {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: start;
+    border-radius: 0;
+
+    button {
+      padding: 10px 10px;
+    }
+  }
+}

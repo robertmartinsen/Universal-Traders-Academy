@@ -31,24 +31,24 @@ function Footer() {
           </ul>
         </div>
         <div className={`mt-4 ${classes.iconContainer}`}>
-          <div className={classes.iconBg}>
-            <a href="https://m.youtube.com/@BastionUTA" target="_blank">
+          <a href="https://m.youtube.com/@BastionUTA" target="_blank">
+            <div className={classes.iconBg}>
               <img src={youtube} className={classes.icon} />
-            </a>
-          </div>
-          <div className={classes.iconBg}>
-            <a href="https://t.me/+08SGOuV6ubNkOTY0" target="_blank">
+            </div>
+          </a>
+          <a href="https://t.me/+08SGOuV6ubNkOTY0" target="_blank">
+            <div className={classes.iconBg}>
               <img src={telegram} className={classes.icon} />
-            </a>
-          </div>
-          <div className={classes.iconBg}>
-            <a
-              href="https://instagram.com/bastiontrader?igshid=MzNlNGNkZWQ4Mg=="
-              target="_blank"
-            >
+            </div>
+          </a>
+          <a
+            href="https://instagram.com/bastiontrader?igshid=MzNlNGNkZWQ4Mg=="
+            target="_blank"
+          >
+            <div className={classes.iconBg}>
               <img src={instagram} className={classes.icon} />
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
         <img src={logo} className={`mt-4 ${classes.logo}`} alt="footer logo" />{" "}
         <p className="pt-3">
