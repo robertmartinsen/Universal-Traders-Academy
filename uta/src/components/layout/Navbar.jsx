@@ -32,9 +32,9 @@ function Navbar() {
   }, [])
 
   return (
-    <section className={classes.navContainer}>
+    <section className={`fixed-top bg-white ${classes.navContainer}`}>
       <nav
-        className={`container col-lg-10 col-xl-8 col-md-10 col-11 ${classes.navbar}`}
+        className={`container col-lg-10 col-xl-8 col-md-12 col-11 col-sm-8 ${classes.navbar}`}
       >
         <a className="navbar-brand fs-4" href="/">
           <img
@@ -172,7 +172,7 @@ function Navbar() {
               </li>
             </ul>
             <div
-              className={`d-flex flex-column justify-content-end align-items-center gap-3 flex-lg mx-4 ${classes.userContainer}`}
+              className={`d-flex flex-column justify-content-end align-items-center ${classes.userContainer}`}
             >
               <NavLink>
                 <FontAwesomeIcon

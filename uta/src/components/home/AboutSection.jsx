@@ -13,7 +13,7 @@ function AboutSection() {
   }
   return (
     <div className={`mt-5 ${classes.AboutSection}`}>
-      <div className="pt-5 container col-lg-10 col-xl-8 col-md-12 col-11 col-sm-8">
+      <div className="pt-5 container col-lg-10 col-xl-8 col-md-10 col-11">
         <div className={`row ${classes.aboutContainer}`}>
           <div className={`${classes.aboutCard}`}>
             <div>
@@ -21,14 +21,14 @@ function AboutSection() {
 
               <div>
                 <p className={classes.para1}>
-                  Welcome to Universal Traders Academy – Founded and led by Bastion, an adept trader with a wealth of
-                  experience spanning five years, Universal Traders Academy is
-                  committed to equipping you with the knowledge and skills
-                  needed to navigate the dynamic world of futures trading.
-                  Whether you're just starting or looking to refine your
-                  strategies, join us at Universal Traders Academy and embark on
-                  a transformative learning experience that will elevate your
-                  trading prowess.
+                  Welcome to Universal Traders Academy – Founded and led by
+                  Bastion, an adept trader with a wealth of experience spanning
+                  five years, Universal Traders Academy is committed to
+                  equipping you with the knowledge and skills needed to navigate
+                  the dynamic world of futures trading. Whether you're just
+                  starting or looking to refine your strategies, join us at
+                  Universal Traders Academy and embark on a transformative
+                  learning experience that will elevate your trading prowess.
                 </p>
               </div>
 

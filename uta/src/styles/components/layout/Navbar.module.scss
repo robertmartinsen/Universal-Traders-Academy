@@ -11,7 +11,8 @@
 
 .logo {
   height: 100px;
-  width: 180px;
+  width: 100%;
+  margin-right: 25px;
 }
 
 .navbar {
@@ -43,6 +44,7 @@
     ul {
       display: flex;
       flex-direction: row;
+      margin-right: 50px;
     }
 
     .navLink {
@@ -78,7 +80,7 @@
       }
 
       &.activeNavLink:before {
-        width: 100%;
+        width: 65%;
       }
 
       .user {

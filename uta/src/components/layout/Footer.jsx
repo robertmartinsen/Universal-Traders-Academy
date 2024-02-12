@@ -9,13 +9,13 @@ import instagram from "../../assets/instagram.svg"
 function Footer() {
   return (
     <footer
-      className={`${classes.footer} footer text-light text-center py-3 pb-5`}
+      className={`${classes.footer} footer bottom text-light text-center py-3 pb-5`}
     >
       <div className="container text-center">
         <div className={`mt-4 ${classes.footerLinks}`}>
           <ul>
             <li>
-              <Link>About Us</Link>
+              <Link to="/About">About Us</Link>
             </li>
             <li>
               <a
@@ -26,29 +26,29 @@ function Footer() {
               </a>
             </li>
             <li>
-              <Link>Contact</Link>
+              <Link to="/Contact">Contact</Link>
             </li>
           </ul>
         </div>
         <div className={`mt-4 ${classes.iconContainer}`}>
-          <div className={classes.iconBg}>
-            <a href="https://m.youtube.com/@BastionUTA" target="_blank">
+          <a href="https://m.youtube.com/@BastionUTA" target="_blank">
+            <div className={classes.iconBg}>
               <img src={youtube} className={classes.icon} />
-            </a>
-          </div>
-          <div className={classes.iconBg}>
-            <a href="https://t.me/+08SGOuV6ubNkOTY0" target="_blank">
+            </div>
+          </a>
+          <a href="https://t.me/+08SGOuV6ubNkOTY0" target="_blank">
+            <div className={classes.iconBg}>
               <img src={telegram} className={classes.icon} />
-            </a>
-          </div>
-          <div className={classes.iconBg}>
-            <a
-              href="https://instagram.com/bastiontrader?igshid=MzNlNGNkZWQ4Mg=="
-              target="_blank"
-            >
+            </div>
+          </a>
+          <a
+            href="https://instagram.com/bastiontrader?igshid=MzNlNGNkZWQ4Mg=="
+            target="_blank"
+          >
+            <div className={classes.iconBg}>
               <img src={instagram} className={classes.icon} />
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
         <img src={logo} className={`mt-4 ${classes.logo}`} alt="footer logo" />{" "}
         <p className="pt-3">
