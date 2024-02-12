@@ -2,7 +2,7 @@
 
 .cookieBanner {
   position: fixed;
-  bottom: -100px; // Start off the screen
+  bottom: -100px; 
   left: 20px;
   background-color: $secondary;
   color: #fff;
@@ -13,12 +13,12 @@
   justify-content: center;
   border-radius: 25px;
   align-items: center;
-  opacity: 0; // Start with opacity 0
-  transition: all 0.5s ease-in-out; // Added transition properties
+  opacity: 0; 
+  transition: all 0.5s ease-in-out; 
 
   &.active {
-    bottom: 20px; // Bring in from the bottom
-    opacity: 1; // Fade in
+    bottom: 20px; 
+    opacity: 1;
   }
 
   a {
