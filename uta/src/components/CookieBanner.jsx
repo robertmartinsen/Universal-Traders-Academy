@@ -1,21 +1,32 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import Cookies from "js-cookie"
 import classes from "../styles/components/CookieBanner.module.scss"
 
 const CookieBanner = () => {
   const [showBanner, setShowBanner] = useState(!Cookies.get("acceptCookies"))
+  const [isActive, setIsActive] = useState(false)
 
   const handleAcceptCookies = () => {
     Cookies.set("acceptCookies", true, { expires: 365 })
     setShowBanner(false)
   }
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsActive(true)
+    }, 500)
+
+    return () => clearTimeout(timeout)
+  }, [])
+
   if (!showBanner) {
     return null
   }
 
   return (
-    <div className={classes.cookieBanner}>
+    <div
+      className={`${classes.cookieBanner} ${isActive ? classes.active : ""}`}
+    >
       <div className={classes.textBox}>
         <p>
           This website uses cookies. Read more about our privacy & policy{" "}
