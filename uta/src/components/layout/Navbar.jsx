@@ -5,10 +5,9 @@ import logo from "../../assets/logo.svg"
 import classes from "../../styles/components/layout/Navbar.module.scss"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBars, faTimes, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons"
 
 function Navbar() {
-  const [activeSection, setActiveSection] = useState("")
   const [showSidebar, setShowSidebar] = useState(false)
 
   const toggleSidebar = () => setShowSidebar(!showSidebar)
@@ -80,40 +79,7 @@ function Navbar() {
                 Free Lessons
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="Courses"
-                className={({ isActive }) =>
-                  `${classes.navLink} ${isActive ? classes.activeNavLink : ""}`
-                }
-                onClick={toggleSidebar}
-                end
-              >
-                Courses
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="Articles"
-                className={({ isActive }) =>
-                  `${classes.navLink} ${isActive ? classes.activeNavLink : ""}`
-                }
-                onClick={toggleSidebar}
-                end
-              >
-                Articles
-              </NavLink>
-            </li>
           </ul>
-
-          <div className="d-flex flex-column justify-content-center align-items-center gap-3 flex-lg mx-4">
-            <NavLink>
-              <FontAwesomeIcon
-                icon={faUser}
-                className={`fs-4 ${classes.user}`}
-              />
-            </NavLink>
-          </div>
         </div>
         <div className={`offcanvas-body flex-lg-row p-4 ${classes.navLinks}`}>
           <div className="d-flex">
@@ -144,43 +110,7 @@ function Navbar() {
                   Free Lessons
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  to="Courses"
-                  className={({ isActive }) =>
-                    `${classes.navLink} ${
-                      isActive ? classes.activeNavLink : ""
-                    }`
-                  }
-                  end
-                >
-                  Courses
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="Articles"
-                  className={({ isActive }) =>
-                    `${classes.navLink} ${
-                      isActive ? classes.activeNavLink : ""
-                    }`
-                  }
-                  end
-                >
-                  Articles
-                </NavLink>
-              </li>
             </ul>
-            <div
-              className={`d-flex flex-column justify-content-end align-items-center ${classes.userContainer}`}
-            >
-              <NavLink>
-                <FontAwesomeIcon
-                  icon={faUser}
-                  className={`fs-4 ${classes.user}`}
-                />
-              </NavLink>
-            </div>
           </div>
         </div>
       </nav>

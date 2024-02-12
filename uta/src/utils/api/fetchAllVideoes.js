@@ -1,4 +1,4 @@
-import { YT_ALL_VIDEOES_URL } from "./endpoints.js"
+import { YT_ALL_VIDEOES_URL, YT_VIDEO_DETAILS_URL } from "./endpoints.js"
 
 const CHANNEL_ID = "UCmsUw_9yP8JVbuXZ6bTDyyQ"
 const UPLOAD_ID = "UUmsUw_9yP8JVbuXZ6bTDyyQ"
@@ -7,7 +7,6 @@ const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY
 export const fetchAllVideos = async () => {
   try {
     const apiUrl = `${YT_ALL_VIDEOES_URL}${UPLOAD_ID}&key=${YOUTUBE_API_KEY}`
-
 
     const response = await fetch(apiUrl)
 
@@ -20,9 +19,8 @@ export const fetchAllVideos = async () => {
     const videos = []
 
     for (const videoItem of data.items) {
-
       const videoDetailsResponse = await fetch(
-        `https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoItem.contentDetails.videoId}&key=${YOUTUBE_API_KEY}`
+        `${YT_VIDEO_DETAILS_URL}${videoItem.contentDetails.videoId}&key=${YOUTUBE_API_KEY}`
       )
 
       if (!videoDetailsResponse.ok) {
@@ -36,7 +34,7 @@ export const fetchAllVideos = async () => {
       const videoDuration = parseISO8601Duration(
         videoDetailsData.items[0].contentDetails.duration
       )
-      const isLongEnough = videoDuration >= 61
+      const isLongEnough = videoDuration >= 62
 
       if (isLongEnough) {
         videos.push({
