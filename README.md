@@ -26,6 +26,7 @@ Develop a modern front-end application for Universal Traders Academy, a learning
 - Viewing trading tools.
 - Youtube API to get videoes from Universal Traders Academy Youtube cannel
 - Carousel for testimonials
+- Ability to fill in a contact form and send a message though EmailJs API
 - Responsive design
 
 ### Project Setup
