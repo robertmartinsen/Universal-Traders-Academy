@@ -2,8 +2,6 @@
 
 ![Alt text](/readme.png)
 
-## Holidaze
-
 ### Goal
 
 The purpose of this project is to create a simple starter webpage for a trading group called Universal Traders Academy. The objective is to display trading tools for users to utilize. The goal is to create a webpage for non users, and a starting gound for user authentication in the future.
